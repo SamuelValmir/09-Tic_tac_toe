@@ -1,10 +1,17 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    background-color: aqua;
+}
+
 :root{
     --boardLineColor: rgb(32, 184, 176); 
 }
 
 .board{
-    background-color: aqua;
-
     height: 300px;
     display: grid;
 
@@ -83,4 +90,38 @@
     right: -10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+
+/* Making the players */
+.x{
+    background-color: #666;
+    width: 5rem;
+    height: 0.5rem;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.x1{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.x2{
+    transform: translate(-50%, -50%) rotate(-45deg) ;
+}
+
+
+.o{
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 }

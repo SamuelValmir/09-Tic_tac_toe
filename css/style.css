@@ -16,9 +16,6 @@ body{
     display: grid;
 
     grid-template: auto auto auto / auto auto auto;
-    grid-template-areas: "a1 a2 a3"
-                         "a4 a5 a6"
-                         "a7 a8 a9";
 
     justify-content: center;
     align-content: center;
@@ -26,48 +23,11 @@ body{
 }
 
 .square{
-
     height: 5em;
     width: 5em;
 
     position: relative;
 
-}
-
-#s1 {
-    grid-area: a1;
-}
-
-#s2 {
-    grid-area: a2;
-}
-
-#s3 {
-    grid-area: a3;
-}
-
-#s4 {
-    grid-area: a4;
-}
-
-#s5 {
-    grid-area: a5;
-}
-
-#s6 {
-    grid-area: a6;
-}
-
-#s7 {
-    grid-area: a7;
-}
-
-#s8 {
-    grid-area: a8;
-}
-
-#s9 {
-    grid-area: a9;
 }
 
 .horizontal-line{

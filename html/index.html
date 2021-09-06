@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<!-- Built in 03/09/2021 by Samuel Valmir -->
+<!-- What i've learned about: grid; variables in CSS; doing two JS scripts communicate by each other; MVC architecture; Arrow functions-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body>
+    <form class="menu no-select" method="GET" action="playGame()">
+        <div class="title"> Tic Tac Toe</div>
+        <div class="player" selected=false onclick="setPlayerX()">X</div>
+        <div class="player" selected=false onclick="setPlayerO()">O</div>
+        <a class="btn" onclick="playGame()">Play Game</a>
+    </form>
+    <script src="../scripts/menuInterface.js"></script>
+</body>
+
+</html>

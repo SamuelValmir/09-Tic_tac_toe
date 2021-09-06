@@ -2,13 +2,14 @@ html, body{
     height: 100%;
 }
 
-body{
-    margin: 0;
-    background-color: aqua;
-}
-
 :root{
     --boardLineColor: rgb(32, 184, 176); 
+    --backgroundColor: aqua;
+}
+
+body{
+    margin: 0;
+    background-color: var(--backgroundColor);
 }
 
 .board{
@@ -51,7 +52,6 @@ body{
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 /* Making the players */
 .x{

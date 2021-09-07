@@ -1,15 +1,9 @@
 "use strict";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     var players = document.querySelectorAll(".player");
-//     players.forEach((player) =>{
-//         player.addEventListener("click", setPlayer);
-//     })
-//     let playerX = players[0];
-//     let playerO = players[1];
-// })
 let playerX = document.getElementsByClassName("player")[0];
 let playerO = document.getElementsByClassName("player")[1];
+let modal = document.querySelector(".modal");
+let modalCloseButton = document.querySelector(".close");
 
 let setPlayerX = () => {
     playerO.setAttribute("selected", false);
@@ -28,6 +22,7 @@ let decoratePlayerOption = (playerOption1, playerOption2) => {
     playerOption2.classList.remove("playerClicked");
 }
 
+// Go to another page where game is on it.
 let playGame = () => {
     if (verifyFields()) {
         let chosenPlayer;
@@ -35,11 +30,22 @@ let playGame = () => {
             chosenPlayer = "x";
         } else if (playerO.getAttribute("selected") === "true") {
             chosenPlayer = "o";
-
         }
         window.location.href = "../html/game.html?chosenPlayer=" + chosenPlayer;
     } else {
-        alert("You need to choose a player!");
+        modal.style.display = "block";
+    }
+}
+
+// When the user clicks on <span> (x), close the modal.
+modalCloseButton.onclick = () => {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it.
+window.onclick = (event) => {
+    if (event.target === modal){
+        modal.style.display = "none";
     }
 }
 

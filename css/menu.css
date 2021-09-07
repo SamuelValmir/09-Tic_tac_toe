@@ -206,6 +206,7 @@ body{
 
 }
 
+/** General class  */
 
 .no-select{
     -ms-touch-select: none;

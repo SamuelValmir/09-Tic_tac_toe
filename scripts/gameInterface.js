@@ -1,9 +1,26 @@
 // CONTROLLER
 
 let turnSpan = document.querySelector(".turn");
+let boardHorizontalLines = document.querySelectorAll(".board-horizontal-line");
+let boardVerticalLines = document.querySelectorAll(".board-vertical-line");
+let removeAnimation = true;
+
+// Show animation when screen is loaded
+function animateBoard() {
+    boardHorizontalLines.forEach((boardHorizontalLine) => {
+        boardHorizontalLine.classList.add("board-horizontal-line-animation")
+    })
+    boardVerticalLines.forEach((boardVerticalLine) => {
+        boardVerticalLine.classList.add("board-vertical-line-animation")
+    })
+}
 
 // Executed when document is loaded
 document.addEventListener('DOMContentLoaded', () => {
+
+    //  Animate board
+    animateBoard()
+
     // Get url received
     let urlString = window.location.href;
     let url = new URL(urlString);
@@ -16,10 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
     squares.forEach((square) => {
         square.addEventListener('click', click);
     })
+
 })
 
 
 let click = (event) => {
+    if (removeAnimation) {
+        boardHorizontalLines.forEach((boardHorizontalLine) => {
+            boardHorizontalLine.classList.remove("board-horizontal-line-animation")
+        })
+        boardVerticalLines.forEach((boardVerticalLine) => {
+            boardVerticalLine.classList.remove("board-vertical-line-animation")
+        })
+    }
     let square = event.target;
     let position = square.id;
     if (square.className == "square") {
@@ -44,12 +70,20 @@ let updateTurnSpan = (position) => {
 
     if (!hasWinner) {
         turnSpan.innerHTML = "Turn: " + symbols[playerTurn];
-    } else if(hasWinner){
+
+        let win = document.querySelector("#winner_bar_1");
+        // win.classList.add("winner-vertical-line");
+
+        let ver = document.querySelector("#winner_bar_Y_1");
+        //ver.classList.add("winner-horizontal-line");
+
+
+    } else if (hasWinner) {
         turnSpan.innerHTML = "Winner: " + board[position];
         boardDiv.innerHTML += ""
     }
-    
-    if (draw){ 
+
+    if (draw) {
         turnSpan.innerHTML = "Draw";
     }
 

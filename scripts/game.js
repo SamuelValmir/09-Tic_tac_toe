@@ -8,7 +8,8 @@ let board = ['', '', '', '', '', '', '', '', ''];
 let playerTurn = 0;
 let symbols = ['x', 'o'];
 let playersCode = ["<div class='o'></div>", "<div class='player-x'><div class='x1 x'></div><div class='x2 x'></div></div>"]
-let winner;
+let hasWinner = false;
+let draw = false;
 
 let winningSequences = [
     [0, 1, 2],
@@ -21,7 +22,6 @@ let winningSequences = [
     [2, 4, 6]
 ];
 let winningSequence;
-let gameOver = false;
 
 let showGame = () => {
 
@@ -44,7 +44,7 @@ let fillIn = (position) => {
         playerTurn = 0;
     }
     itWon();
-    console.log(board);
+    isDraw();
 }
 
 let itWon = () => {
@@ -54,8 +54,32 @@ let itWon = () => {
         let pos3 = winningSequences[i][2];
 
         if (board[pos1] == board[pos2] && board[pos2] == board[pos3] && board[pos3] != '') {
-            gameOver = true;
+            hasWinner = true;
             winningSequence = winningSequences[i];
         }
     }
 }
+
+let isDraw = () => {
+    if(!board.find(findEmpty)){
+        draw = true;
+    }
+}
+
+let findEmpty = (element) => {
+    if (element == ''){
+        return true;
+    }
+
+}
+
+function find(callback) {
+    for (let element of this) {
+        if (callback(element)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+board.find = find;

@@ -31,7 +31,7 @@ let playGame = () => {
         } else if (playerO.getAttribute("selected") === "true") {
             chosenPlayer = "o";
         }
-        window.location.href = "../html/game.html?chosenPlayer=" + chosenPlayer;
+        window.location.href = "./html/game.html?chosenPlayer=" + chosenPlayer;
     } else {
         modal.style.display = "block";
     }

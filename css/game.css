@@ -24,7 +24,8 @@ body{
     
     font-size: 3em;
 
-    animation: showTurnText .5s;
+    animation: showTurnText 1s;
+    animation-timing-function: ease-out;
 }
 
 @keyframes showTurnText {

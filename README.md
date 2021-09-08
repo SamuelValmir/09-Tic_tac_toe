@@ -1,13 +1,16 @@
 <h1 align="center">Tic Tac Toe (REMAKE)</h1>
 
+## See the project here:
+<a href="https://samuelvalmir.github.io/09-Tic_tac_toe/">Go to git hub pages.</a>
+
 ## Description:
 <p> A projects to put in practice my knowledges about javascript and to start learning MVC architecture. This exercise was passed as a challenge in my course Programador BR</p>
 
 ## What I've learned about:
-<p> I improved my advanced javascript knowledge by understanding more about how some quite functions works. That kind of function uses callback, a concept very important used a lot in day life of a programmer </p>
+<p> I've improved my knowledge by understanding more about how make animations with javascript.</p>
 
 ## Status:
-<p> Concluded </p>
+<p> In progress </p>
 
 ## Technologies:
 <div>

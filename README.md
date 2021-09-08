@@ -1,5 +1,10 @@
 <h1 align="center">Tic Tac Toe (REMAKE)</h1>
 
+<h1 align="center">
+  <img width="48%" alt="Menu screen" title="Menu screen" src="./github\Tic tac toe pt1 gif.gif" />
+  <img width="48%" alt="Menu screen" title="Menu screen" src="./github\Tic tac toe pt2 gif.gif" />
+</h1>
+
 ## See the project here:
 <a href="https://samuelvalmir.github.io/09-Tic_tac_toe/">Go to git hub pages.</a>
 
@@ -7,7 +12,7 @@
 <p> A projects to put in practice my knowledges about javascript and to start learning MVC architecture. This exercise was passed as a challenge in my course Programador BR</p>
 
 ## What I've learned about:
-<p> I've improved my knowledge by understanding more about how make: </p>
+<p> I have improved my knowledge by understanding more about how making: </p>
 <ul>
   <li> Animations with javascript </li>
   <li> Doing two scripts communicate by each other </li>

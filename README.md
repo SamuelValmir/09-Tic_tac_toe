@@ -14,7 +14,8 @@
   <li> Grid layout </li>
   <li> Variables in CSS </li>
   <li> MVC architecture </li>
-  <li> Arrow functions</li>
+  <li> Arrow functions </li>
+  <li> Modal box </li>
 </ul>
 
 ## Status:

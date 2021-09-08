@@ -1,7 +1,7 @@
 <h1 align="center">Tic Tac Toe (REMAKE)</h1>
 
 ## See the project here:
-<a href="https://samuelvalmir.github.io/09-Tic_tac_toe/">Go to git hub pages.</a>
+<a>Go to git hub pages.</a>
 
 ## Description:
 <p> A projects to put in practice my knowledges about javascript and to start learning MVC architecture. This exercise was passed as a challenge in my course Programador BR</p>

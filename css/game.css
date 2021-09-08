@@ -14,6 +14,25 @@ body{
     background-color: var(--primaryColor);
 }
 
+.go-back-button{
+    width: 4em;
+    position: absolute;
+    
+    left: 0;
+    animation: showGoBackButton 1s;
+    transition: all .5s;
+}
+
+@keyframes showGoBackButton {
+    from{left: -100%;}
+}
+
+.go-back-button:hover{
+    cursor: pointer;
+    left: -.5%;
+}
+
+
 .turn{
     color: #fefefe;
 
@@ -45,7 +64,7 @@ body{
 
     justify-content: center;
     align-content: center;
-    gap: 10px
+    gap: .5em;
 }
 
 .square{
@@ -53,7 +72,6 @@ body{
     width: 5em;
 
     position: relative;
-
 }
 
 .board-horizontal-line{
@@ -100,6 +118,7 @@ body{
     height: 13%;
 
     position: absolute;
+    z-index: 1;
     
     top: 50%;
     left: 50%;
@@ -118,6 +137,7 @@ body{
     height: 320%;
 
     position: absolute;
+    z-index: 1;
     
     top: 50%;
     left: 50%;
@@ -127,6 +147,24 @@ body{
 
 @keyframes growY {
     from{height: 0%};
+}
+
+.winner-diagonal-line{
+    background-color: var(--tertiaryColor);
+    width: 13%;
+    height: 430%;
+
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    animation: growDiagonal .5s;
+}
+
+@keyframes growDiagonal {
+    from{height: 0;}
 }
 
 /* Making the players */
@@ -180,6 +218,7 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 1em 0;
 
     font-size: x-large;
     font-weight: bolder;
@@ -199,6 +238,15 @@ footer:hover{
     cursor: pointer;
 }
 
+.fade{
+    animation: fade 1s;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+@keyframes fade {
+    from{background-color: var(--primaryColor)};
+}
+
 /** General class  */
 .no-select{
     -ms-touch-select: none;
@@ -206,4 +254,12 @@ footer:hover{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.white{
+    background-color: #fefefe;
+}
+
+.black{
+    background-color: #666;
 }
